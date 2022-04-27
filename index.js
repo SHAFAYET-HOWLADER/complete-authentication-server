@@ -10,6 +10,9 @@ const jwt = require('jsonwebtoken');
 app.get('/', (req, res) => {
     res.send("hello js developer")
 })
+app.get('/hero', (req,res)=>{
+    res.send('hero community express')
+})
 function verifyJWT(req, res, next) {
     const authHeader = req.headers.authorization;
     if (!authHeader) {
